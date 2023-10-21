@@ -1,0 +1,15 @@
+.exams {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+
+  .alert, .createExamButton {
+    max-width: 400px;
+  }
+
+  .createExamButton {
+    margin: 10px;
+  }
+}

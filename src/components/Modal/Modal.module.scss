@@ -1,0 +1,33 @@
+@import "../../Theme.scss";
+
+.modal {
+	position: fixed;
+	width: 60%;
+	height: 60%;
+	transition: 250ms all ease-in-out;
+	background: #111;
+	border-radius: 2px;
+	box-shadow: 0 0 10px #000;
+	z-index: 999;
+	overflow-y: hidden;
+	background-color: #14181b;
+
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%);
+
+	.close {
+		position: fixed;
+		top: 0;
+		right: 0;
+		text-align: center;
+		width: 50px;
+		font-size: 25px;
+		padding-top: 3px;
+		border-radius: 0 0 2px 2px;
+		cursor: pointer;
+		z-index: 1;
+		border-top: 0;
+		color: white;
+	}
+}

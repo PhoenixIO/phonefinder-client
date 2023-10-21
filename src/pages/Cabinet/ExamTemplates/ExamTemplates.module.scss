@@ -1,0 +1,19 @@
+.examTemplates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+
+  .alert, .createTemplateButton {
+    max-width: 400px;
+  }
+
+  .createTemplateButton {
+    margin: 10px;
+  }
+}
+
+.templatesTable {
+  text-align: center;
+}

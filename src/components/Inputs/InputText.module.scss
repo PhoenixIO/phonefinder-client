@@ -1,0 +1,72 @@
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+label {
+  color: white;
+  margin-right: 5px;
+}
+
+.inputGroup {
+  position: relative;
+  padding: 15px 0 0;
+  margin: 10px;
+}
+
+.input {
+  width: 300px;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 16px;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  text-align: center;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .inputLabel {
+    font-size: 16px;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.inputLabel {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  transition: 0.2s;
+  font-size: 14px;
+  color: $gray;
+}
+
+.input:focus {
+  ~ .inputLabel {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 14px;
+    color: $primary;
+    font-weight: 700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+
+.input {
+  &:required, &:invalid { box-shadow: none; }
+}

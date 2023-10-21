@@ -1,0 +1,11 @@
+.createExam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+
+  .save {
+    margin: 10px;
+  }
+}
