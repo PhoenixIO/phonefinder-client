@@ -12,10 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 
-  &.stop {
-    overflow: hidden;
-  }
-
   header {
     z-index: 1000;
     position: relative;
@@ -95,7 +91,6 @@
         line-height: 1;
         font-size: 15px;
         letter-spacing: 2px;
-        text-transform: lowercase;
         transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
       }
 

@@ -2,16 +2,69 @@ import { useState, useEffect } from 'react';
 import styles from './Main.module.scss';
 import clsx from 'clsx';
 
+const tabs = [
+  { 
+    name: 'Ідея',
+    id: 'vision',
+    background: 'https://assets.codepen.io/214624/vision.jpg',
+    content: (
+      <div>
+        <h1>Ідея</h1>
+      </div>
+    ),
+  },
+  { 
+    name: 'Концепція',
+    id: 'concept',
+    background: 'https://assets.codepen.io/214624/space.jpg',
+    content: (
+      <div>
+        <h1>Концепція</h1>
+      </div>
+    ),
+  },
+  { 
+    name: 'Використання',
+    id: 'use',
+    background: 'https://assets.codepen.io/214624/future.jpg',
+    content: (
+      <div>
+        <h1>Використовуй</h1>
+      </div>
+    ),
+  },
+];
+
 export function Main() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [stickyHeader, setStickyHeader] = useState(false);
+  const [stickyHeader, setStickyHeader] = useState(true);
+
+  const handleScroll = () => {
+    setMenuOpen(false);
+    setStickyHeader(window.scrollY >= 100);
+  };
 
   useEffect(() => {
-
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const openMenu = () => {
     setMenuOpen(true);
+    setStickyHeader(false);
+  };
+
+  const onLinkClick = (event: any, id: string) => {
+    event.preventDefault();
+
+    const targetElement = document.querySelector('#' + id);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+    setMenuOpen(false);
+    setStickyHeader(true);
   };
 
   return (
@@ -22,10 +75,7 @@ export function Main() {
         </svg>
 
         <nav>
-          <a href="#vision">Vision</a>
-          <a href="#knowledge">Knowledge</a>
-          <a href="#space">Space</a>
-          <a href="#future">Future</a>
+          {tabs.map((tab) => <a key={tab.id} href={'#' + tab.id} onClick={(e) => onLinkClick(e, tab.id)}>{tab.name}</a>)}
           <button onClick={openMenu}>
             <span></span>
             <span></span>
@@ -34,18 +84,13 @@ export function Main() {
       </header>
 
       <div className={clsx(styles.page, menuOpen && styles.menuOpen)}>
-        <section id="vision" style={{backgroundImage: 'url(https://assets.codepen.io/214624/vision.jpg)'}}>
-          <h1>Vision.</h1>
-        </section>
-        <section id="knowledge" style={{backgroundImage: 'url(https://assets.codepen.io/214624/knowledge.jpg)'}}>
-          <h1>Knowledge.</h1>
-        </section>
-        <section id="space" style={{backgroundImage: 'url(https://assets.codepen.io/214624/space.jpg)'}}>
-          <h1>Space.</h1>
-        </section>
-        <section id="future" style={{backgroundImage: 'url(https://assets.codepen.io/214624/future.jpg)'}}>
-          <h1>Future.</h1>
-        </section>
+        {tabs.map(tab => {
+          return (
+            <section key={tab.id} id={tab.id} style={{ backgroundImage: `url(${tab.background})` }}>
+              {tab.content}
+            </section>
+          );
+        })}
       </div>
     </div>
   );
