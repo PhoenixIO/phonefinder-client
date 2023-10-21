@@ -6,7 +6,6 @@ const tabs = [
   { 
     name: 'Ідея',
     id: 'vision',
-    background: 'https://assets.codepen.io/214624/vision.jpg',
     content: (
       <div>
         <h1>Ідея</h1>
@@ -16,7 +15,6 @@ const tabs = [
   { 
     name: 'Концепція',
     id: 'concept',
-    background: 'https://assets.codepen.io/214624/space.jpg',
     content: (
       <div>
         <h1>Концепція</h1>
@@ -26,7 +24,6 @@ const tabs = [
   { 
     name: 'Використання',
     id: 'use',
-    background: 'https://assets.codepen.io/214624/future.jpg',
     content: (
       <div>
         <h1>Використовуй</h1>
@@ -86,7 +83,7 @@ export function Main() {
       <div className={clsx(styles.page, menuOpen && styles.menuOpen)}>
         {tabs.map(tab => {
           return (
-            <section key={tab.id} id={tab.id} style={{ backgroundImage: `url(${tab.background})` }}>
+            <section key={tab.id} id={tab.id}>
               {tab.content}
             </section>
           );
