@@ -178,7 +178,6 @@
     &.menuOpen {
       opacity: 0.6;
       filter: blur(20px);
-      transform: scale(1.2);
     }
 
     section {
@@ -203,10 +202,16 @@
       }
 
       h1 {
-        font-size: 120px;
+        font-size: 70px;
         margin: 0;
         z-index: 2;
         position: relative;
+        text-align: center;
+      }
+      h3 {
+        font-size: 30px;
+        margin-top: 10px;
+        text-align: center;
       }
     }
   }
