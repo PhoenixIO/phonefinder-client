@@ -61,7 +61,7 @@ export function Auth() {
               <div className="row full-height justify-content-center">
                   <div className="col-12 text-center align-self-center py-5">
                       <div className="section pb-5 pt-5 pt-sm-2 text-center">
-                          <h6 className="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                          <h6 className="mb-0 pb-3"><span>Вхід </span><span>Реєстрація</span></h6>
                           <input className="checkbox" type="checkbox" id="reg-log" name="reg-log" />
                           <label htmlFor="reg-log"></label>
                           <div className="card-3d-wrap mx-auto">
@@ -72,21 +72,21 @@ export function Auth() {
                                               <h4 className="mb-4 pb-3">Log In</h4>
                                               <div className="form-group">
                                                   <input type="email" name="login_email" className="form-style"
-                                                      placeholder="Your Email" id="login_email" autoComplete="off"
+                                                      placeholder="Ваша електронна адреса" id="login_email" autoComplete="off"
                                                       onChange={(e) => setEmail(e.target.value)}
                                                     />
                                                   <i className="input-icon uil uil-at"></i>
                                               </div>
                                               <div className="form-group mt-2">
                                                   <input type="password" name="login_password" className="form-style"
-                                                      placeholder="Your Password" id="login_password" autoComplete="off"
+                                                      placeholder="Ващ пароль" id="login_password" autoComplete="off"
                                                       onChange={(e) => setPassword(e.target.value)}
                                                     />
                                                   <i className="input-icon uil uil-lock-alt"></i>
                                               </div>
                                               <a href="#" className="btn mt-4" onClick={onLogin}>submit</a>
                                               <p className="mb-0 mt-4 text-center">
-                                                <a href="#0" className="link">Forgot your password?</a>
+                                                <a href="#0" className="link">Забули пароль?</a>
                                               </p>
                                           </div>
                                       </div>
@@ -97,26 +97,26 @@ export function Auth() {
                                               <h4 className="mb-4 pb-3">Sign Up</h4>
                                               <div className="form-group mt-2">
                                                   <input type="email" name="reg_email" className="form-style"
-                                                      placeholder="Your Email" id="reg_email" autoComplete="off"
+                                                      placeholder="Ваша електронна адреса" id="reg_email" autoComplete="off"
                                                       onChange={(e) => setEmail(e.target.value)}
                                                     />
                                                   <i className="input-icon uil uil-at"></i>
                                               </div>
                                               <div className="form-group mt-2">
                                                 <input type="password" name="reg_password" className="form-style"
-                                                    placeholder="Your Password" id="reg_password" autoComplete="off"
+                                                    placeholder="Ваш пароль" id="reg_password" autoComplete="off"
                                                     onChange={(e) => setPassword(e.target.value)}
                                                   />
                                                   <i className="input-icon uil uil-lock-alt"></i>
                                               </div>
                                               <div className="form-group mt-2">
                                                 <input type="password" name="reg_password_repeat" className="form-style"
-                                                    placeholder="Repeat Password" id="reg_password_repeat" autoComplete="off"
+                                                    placeholder="Повторіть пароль" id="reg_password_repeat" autoComplete="off"
                                                     onChange={(e) => setRepeatPassword(e.target.value)}  
                                                   />
                                                   <i className="input-icon uil uil-lock-alt"></i>
                                               </div>
-                                              <a className="btn mt-4" onClick={onRegister}>submit</a>
+                                              <a className="btn mt-4" onClick={onRegister}>Підтвердити</a>
                                           </div>
                                       </div>
                                   </div>
