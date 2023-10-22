@@ -8,6 +8,7 @@ import './Reviews.scss';
 export function Reviews() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [reviews, setReviews] = useState<any[]>([]);
+  const [avgRating, setAvgRating] = useState(0);
 
   const getReviews = () => {
     if (!phoneNumber) {
@@ -19,6 +20,7 @@ export function Reviews() {
         toast(data.message, { type: 'error' });
       } else {
         setReviews(data);
+        setAvgRating(data.reduce((acc: number, val: any) => acc + Number(val.rating), 0) / data.length);
         if (data.length === 0) {
           toast('Відгуків за цим номером не знайдено', { type: 'warning' });
         }
@@ -48,19 +50,23 @@ export function Reviews() {
               <div  className="form-input-3"> 
           </div>
           <div className="button-center">
-            <a className="btn mt-4" onClick={getReviews}>відправити</a>
+            <a className="btn mt-4" onClick={getReviews}>запросити</a>
           </div>
-        
+          
+          <hr />
+
+          {reviews.length ? <div className="avgRating">Середній рейтинг: {avgRating}</div> : ''}
+
           <div className="reviews-container">
             {reviews.map((review) => {
               return (
-                <div className="review">
+                <div key={review._id} className="review">
                   <div className="description">{review.description}</div>
-                  <div className="rating">{review.description}</div>
+                  <div className="rating">{review.rating}/5</div>
                   {review.attachments.map((source: string) => {
                     return <img src={source} className="attachment" />
                   })}
-                  <div className="date-added">Added: {new Date(review.createdAt).toLocaleDateString()}</div>
+                  <div className="date-added">Додано: {new Date(review.createdAt).toLocaleDateString()}</div>
                 </div>
               );
             })}
