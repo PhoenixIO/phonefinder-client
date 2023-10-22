@@ -76,7 +76,7 @@ export function Reviews() {
           <hr />
 
           {reviews.length ? (
-            <div className="avgRating">Середній рейтинг: {avgRating}</div>
+            <div className="avgRating">Середній рейтинг: {avgRating.toFixed(2)}</div>
           ) : (
             ""
           )}
