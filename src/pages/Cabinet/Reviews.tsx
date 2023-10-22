@@ -10,14 +10,17 @@ export function Reviews() {
   const [reviews, setReviews] = useState<any[]>([]);
 
   const getReviews = () => {
+    if (!phoneNumber) {
+      return toast('Введіть номер телефону', { type: 'warning' });
+    }
+
     api.get(`${api.endpoint}/reviews/check/${phoneNumber}`, (data: any) => {
       if (data.message) {
         toast(data.message, { type: 'error' });
       } else {
-        console.log(data);
         setReviews(data);
         if (data.length === 0) {
-            toast('Відгуків за цим номером не знайдено', { type: 'warning' });
+          toast('Відгуків за цим номером не знайдено', { type: 'warning' });
         }
       }
     });
@@ -65,5 +68,5 @@ export function Reviews() {
         </div>
       </div>
     </div>
-  )
+  );
 }
