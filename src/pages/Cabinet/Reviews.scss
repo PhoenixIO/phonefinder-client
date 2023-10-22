@@ -12,9 +12,17 @@
 
     .reviews-container {
         display: flex;
+        justify-content: center;
+        margin-top: 10px;
 
         .review {
+            .description {
+                color: #fff;   
+            }
 
+            img {
+                width: 250px;
+            }
         }
     }
 
@@ -46,12 +54,12 @@
         min-height: 95vh;
     }
     
-    .form{
-        width: 440px;
+    .form {
+        width: auto;
         background-color: black;
         border-radius: 2%;
         position: relative;
-        padding-bottom: 10px;
+        padding: 10px;
     }
     
     h4 {

@@ -11,10 +11,20 @@
     overflow-x: hidden;
 
     .logo {
-        left: 50%;
-        top: -20px;
-        transform: translateX(-50%);
+        left: 20px;
+        top: 20px;
         width: 70px;
+
+        position: absolute;
+        display: block;
+        transition: all 250ms linear;
+        z-index: 100;
+
+        img {
+            height: 26px;
+            width: auto;
+            display: block;
+        }
     }
 
     a {
@@ -276,18 +286,4 @@
         color: #ffffff;
         box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
     }
-    
-    .logo {
-        position: absolute;
-        top: 10px;
-        display: block;
-        z-index: 100;
-        transition: all 250ms linear;
-    }
-    .logo img {
-        height: 26px;
-        width: auto;
-        display: block;
-    }
-    
 }

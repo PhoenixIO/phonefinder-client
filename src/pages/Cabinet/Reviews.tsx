@@ -48,16 +48,20 @@ export function Reviews() {
             <a className="btn mt-4" onClick={getReviews}>відправити</a>
           </div>
         
-            <div className="reviews-container">
-                {reviews.map((review) => {
-                    return (
-                        <div className="review">
-                            <div className="description">{review.description}</div>
-                            <div className="rating">{review.description}</div>
-                        </div>
-                    )
-                })}
-            </div>
+          <div className="reviews-container">
+            {reviews.map((review) => {
+              return (
+                <div className="review">
+                  <div className="description">{review.description}</div>
+                  <div className="rating">{review.description}</div>
+                  {review.attachments.map((source: string) => {
+                    return <img src={source} className="attachment" />
+                  })}
+                  <div className="date-added">Added: {new Date(review.createdAt).toLocaleDateString()}</div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
