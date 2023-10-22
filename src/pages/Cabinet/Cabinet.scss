@@ -122,6 +122,8 @@
         display: flex;
         margin: 0px;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     
     .form-input-3{
