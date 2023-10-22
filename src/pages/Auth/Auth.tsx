@@ -69,7 +69,7 @@ export function Auth() {
                                   <div className="card-front">
                                       <div className="center-wrap">
                                           <div className="section text-center">
-                                              <h4 className="mb-4 pb-3">Log In</h4>
+                                              <h4 className="mb-4 pb-3">Вхід</h4>
                                               <div className="form-group">
                                                   <input type="email" name="login_email" className="form-style"
                                                       placeholder="Ваша електронна адреса" id="login_email" autoComplete="off"
@@ -84,7 +84,7 @@ export function Auth() {
                                                     />
                                                   <i className="input-icon uil uil-lock-alt"></i>
                                               </div>
-                                              <a href="#" className="btn mt-4" onClick={onLogin}>submit</a>
+                                              <a href="#" className="btn mt-4" onClick={onLogin}>Підтвердити</a>
                                               <p className="mb-0 mt-4 text-center">
                                                 <a href="#0" className="link">Забули пароль?</a>
                                               </p>
@@ -94,7 +94,7 @@ export function Auth() {
                                   <div className="card-back">
                                       <div className="center-wrap">
                                           <div className="section text-center">
-                                              <h4 className="mb-4 pb-3">Sign Up</h4>
+                                              <h4 className="mb-4 pb-3">Реєстрація</h4>
                                               <div className="form-group mt-2">
                                                   <input type="email" name="reg_email" className="form-style"
                                                       placeholder="Ваша електронна адреса" id="reg_email" autoComplete="off"
