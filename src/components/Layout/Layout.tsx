@@ -29,7 +29,6 @@ export function Layout({ children, authGuard = false }: LayoutProps) {
 
   return (
     <div className={styles.layout}>
-      <Header authorized={authorized} />
       <div className={styles.children}>
         {authGuard && (!authRequested || !authorized) && (
           <Loader className={!authorized ? styles.notAuthorized : ''} />

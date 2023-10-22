@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Main.module.scss';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 const tabs = [
   { 
@@ -27,6 +28,7 @@ const tabs = [
     content: (
       <div>
         <h1>Використовуй</h1>
+        <Link to='/login'>sdsaasd</Link>
       </div>
     ),
   },

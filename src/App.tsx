@@ -2,12 +2,11 @@ import { useCallback } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer, Flip } from 'react-toastify';
 import Particles from 'react-tsparticles';
-import { Engine, ParticlesOptions } from 'tsparticles-engine';
+import { Engine } from 'tsparticles-engine';
 import { Main } from './pages/Main/Main';
 import { Auth } from './pages/Auth/Auth';
 import { Cabinet } from './pages/Cabinet/Cabinet';
 import { Layout } from './components/Layout/Layout';
-import { ExamPage } from './pages/Exam/Exam';
 import { loadFull } from 'tsparticles';
 import main from './background/main.json';
 
@@ -36,8 +35,7 @@ function App() {
       <Routes>
         <Route path="*" element={<Main />} />
         <Route path="/login" element={<Auth />} />
-        <Route path="/cabinet" element={<Layout authGuard> <Cabinet /> </Layout>} />
-        <Route path="/exam/:id" element={<Layout> <ExamPage /> </Layout>} />
+        <Route path="/cabinet" element={<Cabinet />} />
       </Routes>
     </BrowserRouter>
   );

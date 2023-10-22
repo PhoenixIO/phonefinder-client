@@ -10,3 +10,8 @@ body {
   margin: 0;
   background-color:#2b343d;
 }
+
+#tsparticles {
+  position: absolute;
+  z-index: -2;
+}
