@@ -4,8 +4,19 @@ import { Link } from 'react-router-dom';
 import * as api from '../../api';
 
 import './Cabinet.scss';
+import { useSelector } from 'react-redux';
+import { selectAccount, selectEmail } from '../../redux/account/selector';
+
+const toBase64 = (file: File): Promise<string> => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => resolve(reader.result as string);
+  reader.onerror = reject;
+});
 
 export function Cabinet() {
+  const isAuthorized = useSelector(selectAccount);
+  console.log(isAuthorized);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [description, setDescription] = useState('');
   const [rating, setRating] = useState(1);
@@ -16,16 +27,19 @@ export function Cabinet() {
       setFile(e.target.files[0]);
     }
   };
-  const sendForm = () => {
+  const sendForm = async () => {
     console.log(phoneNumber, description, file);
-    const formData = new FormData();
-    formData.append("file", file as any);
+    let fileSource = '';
+    if (file) {
+      fileSource = await toBase64(file);
+    }
+    console.log(fileSource);
 
     api.post(`${api.endpoint}/reviews/create`, {
       phone: phoneNumber,
       description,
       rating,
-      attachments: ['hui', '2'],
+      attachments: [fileSource],
       status: 'verified',
     }, (data: any) => {
       if (data.message) {

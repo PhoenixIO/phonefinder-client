@@ -29,6 +29,7 @@ const tabs = [
       <div>
         <h1>Використовуй</h1>
         <div className={styles.useBtns}>
+          <Link to='/reviews' className={styles.useBtn}>Отримати відгуки</Link>
           <Link to='/login' className={styles.useBtn}>Вхід</Link>
           <Link to='/cabinet' className={styles.useBtn}>Надіслати відгук</Link>
         </div>

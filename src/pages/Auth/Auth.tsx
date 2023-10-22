@@ -21,6 +21,7 @@ export function Auth() {
     api.post(`${api.endpoint}/auth/login`, { email, password }, (data: any) => {
       const { user } = data;
       if (user) {
+        console.log(user);
         toast('Ви ввійшли до акаунту!', { type: 'success' });
         dispatch(setAccount(user));
         navigate('/cabinet');
