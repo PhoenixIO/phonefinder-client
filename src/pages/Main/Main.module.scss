@@ -17,6 +17,10 @@
     margin-top: 30px;
     gap: 20px;
 
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+    }
+
     .useBtn {
       padding: 10px 20px;
       text-transform: uppercase;
@@ -116,6 +120,11 @@
       border: 1px solid rgba(255, 255, 255, 0.06);
       transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
 
+      @media screen and (max-width: 960px) {
+        flex-direction: column;
+        width: 90vw;
+      }
+
       a {
         color: #fff;
         text-decoration: none;
@@ -207,11 +216,18 @@
         z-index: 2;
         position: relative;
         text-align: center;
+        @media screen and (max-width: 960px) {
+          font-size: 3rem;
+        }
       }
       h3 {
         font-size: 30px;
         margin-top: 10px;
         text-align: center;
+
+        @media screen and (max-width: 960px) {
+          font-size: 1.25rem;
+        }
       }
     }
   }
