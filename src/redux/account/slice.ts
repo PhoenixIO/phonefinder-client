@@ -5,6 +5,7 @@ import * as api from '../../api';
 const initialState: AccountState = {
   email: '',
   roles: [],
+  loaded: false,
 }
 
 const accountSlice = createSlice({
@@ -20,14 +21,17 @@ const accountSlice = createSlice({
       state.email = action.payload.email;
       state.roles = action.payload.roles;
     },
+    setAccountLoaded: (state, action: PayloadAction<boolean>) => {
+      state.loaded = action.payload;
+    },
     logout: () => {
       api.post(`${api.endpoint}/auth/logout`, {});
       accountSlice.actions.clearAccount();
-      window.location.reload();
+      window.location.href = '/login';
     },
   },
-})
+});
 
-export const { setAccount, clearAccount, logout } = accountSlice.actions;
+export const { setAccount, setAccountLoaded, clearAccount, logout } = accountSlice.actions;
 
 export default accountSlice.reducer;

@@ -6,4 +6,5 @@ export enum Role {
 export type AccountState = {
   email: string;
   roles: Role[];
+  loaded: boolean;
 }

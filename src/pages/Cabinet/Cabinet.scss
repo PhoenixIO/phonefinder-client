@@ -11,20 +11,26 @@
     overflow: hidden;
 
     .logo {
+        position: absolute;
+        display: block;
         left: 20px;
         top: 20px;
         width: 70px;
-
-        position: absolute;
-        display: block;
         transition: all 250ms linear;
-        z-index: 100;
+        z-index: 10;
 
         img {
             height: 26px;
             width: auto;
             display: block;
         }
+    }
+
+    .logout-btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 10;
     }
 
     .section{

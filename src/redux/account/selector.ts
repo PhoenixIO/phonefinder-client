@@ -5,3 +5,5 @@ export const selectEmail = (state: RootState) => state.account.email;
 export const selectRoles = (state: RootState) => state.account.roles;
 
 export const selectAccount = (state: RootState) => state.account;
+
+export const selectAccountLoaded = (state: RootState) => state.account.loaded;
