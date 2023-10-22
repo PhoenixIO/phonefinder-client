@@ -107,7 +107,7 @@ export function Cabinet() {
               />
           </div>
           <div className="button-center">
-            <a className="btn mt-4" onClick={sendForm}>відправити</a>
+            <a className="btn" onClick={sendForm}>відправити</a>
           </div>
           </div>
       </div>

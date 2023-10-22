@@ -15,7 +15,7 @@
         display: block;
         left: 20px;
         top: 20px;
-        width: 70px;
+        width: 90px;
         transition: all 250ms linear;
         z-index: 10;
 
@@ -30,10 +30,11 @@
         position: absolute;
         right: 20px;
         top: 20px;
+        margin: 0!important;
         z-index: 10;
     }
 
-    .section{
+    .section {
         width: 100%;
         top: 20px;
         position: relative;
@@ -266,6 +267,7 @@
     .btn {
         border-radius: 4px;
         height: 44px;
+        margin: 20px 10px;
         font-size: 13px;
         font-weight: 600;
         text-transform: uppercase;

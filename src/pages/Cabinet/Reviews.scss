@@ -27,21 +27,19 @@
     }
 
     .logo {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 70px;
-    }
-    .logo {
         position: absolute;
-        top: 5px;  
         display: block;
-        z-index: 100;
+        left: 20px;
+        top: 20px;
+        width: 90px;
         transition: all 250ms linear;
-    }
-    .logo img {
-        height: 26px;
-        width: auto;
-        display: block;
+        z-index: 10;
+
+        img {
+            height: 26px;
+            width: auto;
+            display: block;
+        }
     }
 
     .section{
