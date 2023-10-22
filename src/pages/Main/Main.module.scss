@@ -6,7 +6,8 @@
   color: #fff;
   font-size: 18px;
   font-weight: 400;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", sans-serif !important;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue",
+    sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -35,17 +36,16 @@
       transition: 0.5s ease;
       user-select: none;
       text-decoration: none;
-    
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         color: #ffffff;
         background: #008cff;
         border: 1px solid #008cff;
         text-decoration: none;
 
-        box-shadow: 0 0 5px #008cff,
-          0 0 10px #008cff,
-          0 0 20px #008cff,
-          0 0 50px #008cff;  
+        box-shadow: 0 0 5px #008cff, 0 0 10px #008cff, 0 0 20px #008cff,
+          0 0 50px #008cff;
       }
     }
   }
@@ -95,7 +95,8 @@
 
           span {
             transform: scalex(1);
-            transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s, 0.3s margin ease-in 0s;
+            transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s,
+              0.3s margin ease-in 0s;
           }
         }
       }
@@ -174,7 +175,8 @@
           display: block;
           margin: 5px auto;
           transform: scalex(0);
-          transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s margin ease-in 0s;
+          transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0s,
+            0.3s margin ease-in 0s;
         }
       }
     }
