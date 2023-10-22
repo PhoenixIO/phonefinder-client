@@ -65,10 +65,11 @@ export function Cabinet() {
                   ></textarea>
               </div>
               <div className="text-left">
-                  <p>Оцініть рейтинг</p>
+                  <p>Рейтинг</p>
               </div>
               <div className="form-input-2">
-                <input type="range" min={1} max={5} onChange={(e) => setRating(Number(e.target.value))} />
+                  <span>{rating}/5</span>
+                <input type="range" min={1} max={5} defaultValue={1} onChange={(e) => setRating(Number(e.target.value))} />
               </div>
               <div className="text-left">
                   <p>Додайте докази</p>
