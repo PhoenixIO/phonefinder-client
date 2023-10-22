@@ -8,10 +8,28 @@
     font-size: 15px;
     line-height: 1.7;
     color: #c4c3ca;
-    overflow-x: hidden;
+    overflow: hidden;
+    .logo {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+    }
+    .logo {
+        position: absolute;
+        top: 5px;  
+        display: block;
+        z-index: 100;
+        transition: all 250ms linear;
+    }
+    .logo img {
+        height: 26px;
+        width: auto;
+        display: block;
+    }
 
     .section{
         width: 100%;
+        top: 20px;
         position: relative;
         display: flex;
         justify-content: center;
@@ -263,7 +281,7 @@
         border: none;
         background-color: #ffffff;
         color: #313236;
-        box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
+        box-shadow: 0 -2px 24px 0 rgba(255, 235, 167, 0.2);
     }
     .btn:active,
     .btn:focus {

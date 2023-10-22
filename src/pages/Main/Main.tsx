@@ -28,7 +28,10 @@ const tabs = [
     content: (
       <div>
         <h1>Використовуй</h1>
-        <Link to='/login'>sdsaasd</Link>
+        <div className={styles.useBtns}>
+          <Link to='/login' className={styles.useBtn}>Вхід</Link>
+          <Link to='/cabinet' className={styles.useBtn}>Надіслати відгук</Link>
+        </div>
       </div>
     ),
   },

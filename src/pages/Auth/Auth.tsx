@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import * as api from '../../api';
 import { setAccount } from '../../redux/account/slice'
@@ -43,16 +43,17 @@ export function Auth() {
         toast(data.message, { type: 'error' });
       } else {
         toast('Ви успішно зареєструвались! Тепер увійдіть в акаунт', { type: 'success' });
-        navigate('/login');
       }
     });
   };
 
   return (
     <div className="auth">
-      <svg className="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 714.6 401.1">
-        <path fill="#fff" fillRule="evenodd" d="M502.8 0h211.8l-23 39.7-138.5 240L483 401H342.7L413 279.6 251.4 0h140.3L483 158.1 538.6 62 502.8 0Zm-201 279.6L140.1 0H0l231.7 401 70-121.4Z"/>
-      </svg>
+      <Link to="/">
+        <svg className="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 714.6 401.1">
+          <path fill="#fff" fillRule="evenodd" d="M502.8 0h211.8l-23 39.7-138.5 240L483 401H342.7L413 279.6 251.4 0h140.3L483 158.1 538.6 62 502.8 0Zm-201 279.6L140.1 0H0l231.7 401 70-121.4Z"/>
+        </svg>
+      </Link>
 
       <div className="section">
           <div className="container">
