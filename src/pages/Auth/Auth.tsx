@@ -79,7 +79,7 @@ export function Auth() {
                                               </div>
                                               <div className="form-group mt-2">
                                                   <input type="password" name="login_password" className="form-style"
-                                                      placeholder="Ващ пароль" id="login_password" autoComplete="off"
+                                                      placeholder="Ваш пароль" id="login_password" autoComplete="off"
                                                       onChange={(e) => setPassword(e.target.value)}
                                                     />
                                                   <i className="input-icon uil uil-lock-alt"></i>
