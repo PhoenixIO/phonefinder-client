@@ -86,7 +86,7 @@ export function Reviews() {
               return (
                 <div key={review._id} className="review">
                   <div className="description">{review.description}</div>
-                  <div className="rating">{review.rating}/5</div>
+                  <div className="rating">Оцінка: {review.rating}/5</div>
                   {review.attachments.map((source: string) => {
                     return <img src={source} className="attachment" />;
                   })}
